@@ -9,7 +9,7 @@ def exitcheck(txt):
 
 user = input('Hello! Welcome to the quiz maker.\nTo start, type "RANDOM" if you want the questions to be randomized, or type "NORMAL" for the questions to be in order.\nEnter "EXIT" to quit and save.\n')
 exitcheck(user)
-questionstxt.write(str.capitalize(user)+'\n')
+questionstxt.write(str.upper(user)+'\n')
 
 q=1
 while True:
@@ -26,7 +26,9 @@ while True:
             try:
                 if int(user)>0 and int(user)<5:
                     question = question+"5: "+user+"\n"
-                break
+                    break
+                else:
+                    print('Please enter 1,2,3 or 4.')
             except:
                 print('Please enter 1,2,3 or 4.')
         else:
